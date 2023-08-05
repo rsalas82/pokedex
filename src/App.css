@@ -1,0 +1,13 @@
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    padding-left: 2rem;
+}
+
+footer {
+    margin-top: auto;
+}
