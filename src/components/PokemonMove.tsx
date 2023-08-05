@@ -1,4 +1,5 @@
 import { useMove } from "../hooks/useMove"
+import PokemonLogo from '../assets/pokeball.svg'
 
 const PokemonMove = ({ name }: { name: string }) => {
 
@@ -6,7 +7,7 @@ const PokemonMove = ({ name }: { name: string }) => {
     const { id, name: moveName, type, power } = move
 
     return (
-        !isLoading && (
+        !isLoading ? (
             <li key={id} className='grid grid-cols-3 font-bold'>
                 <span className="bg-amber-100 rounded-2xl px-1 justify-self-start">{type}</span>
                 <span>{moveName}</span>
@@ -14,7 +15,8 @@ const PokemonMove = ({ name }: { name: string }) => {
                     <span className="bg-amber-100 rounded-2xl px-1 justify-self-end">{power}</span>
                 )}
             </li>
-        )
+        ):
+        <img src={PokemonLogo} className='animate-spin' />
 
     )
 }
