@@ -5,7 +5,7 @@ import PokemonMove from "./PokemonMove"
 import PokemonType from "./PokemonType"
 
 
-const PokemonCard = ({ pokemon }: { pokemon: AdaptedPokemon }) => {
+const PokemonCard = ({ pokemon, isWinner = false }: { pokemon: AdaptedPokemon, isWinner: boolean }) => {
     const { name, order, image, types, baseExperience, moves } = pokemon
     let [fromColor, toColor] = ['', '', '']
     const primaryType = getColorByType(types[0].color)
@@ -15,13 +15,13 @@ const PokemonCard = ({ pokemon }: { pokemon: AdaptedPokemon }) => {
     toColor = secondaryType ? secondaryType.toColor : primaryType ? primaryType.toColor : ''
 
     return (
-        <article className={`flex flex-col h-fit border-2 rounded-md items-center p-2 bg-gradient-to-r ${fromColor} ${toColor}`}>
+        <article className={`flex flex-col w-fit h-fit border-2 rounded-md items-center p-2 bg-gradient-to-r ${fromColor} ${toColor}`}>
             <header className="flex justify-between w-full">
                 <span className="pb-2">#{order} <strong>{camelize(name)}</strong></span>
                 <span><strong>{baseExperience}</strong> EXP</span>
             </header>
             <main className="p-2 bg-white">
-                <img src={image} height={256} width={256} />
+                <img src={image} height={256} width={256} className={isWinner ? 'animate-bounce' : ''}/>
                 <div className="flex items-center justify-center">
                     {types.map(({ name, color }) => <PokemonType key={name} name={name} color={color} />)}
                 </div>

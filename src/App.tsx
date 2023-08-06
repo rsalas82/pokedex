@@ -19,9 +19,6 @@ function App() {
           <Switch>
             <Route path='/' component={Pokedex}></Route>
             <Route path='/tournament' component={Tournament}></Route>
-            {/* <Route path='/pokemon/:name'>
-              {params => <FullStatsSummary name={params.name} />}
-            </Route> */}
             <Route component={Error404} />
           </Switch>
         </ChosenProvider>

@@ -1,10 +1,10 @@
-import Logo from '../assets/pokemon-logo.png'
+import PokemonLogo from '../assets/pokemon-logo.png'
 
 const Header = () => {
     return (
         <header className='flex justify-start px-4 h-[20vh] pb-4'>
-            <img src={Logo} />
-            <h1 className='pl-4'>Tournament Generator</h1>
+            <img src={PokemonLogo} />
+            <h1 className='flex pl-4 items-center'>Tournament Generator</h1>
         </header>
     )
 }

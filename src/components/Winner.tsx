@@ -4,7 +4,9 @@ import PokemonCard from "./PokemonCard"
 const Winner = ({pokemon}: {pokemon: AdaptedPokemon}) => {
 
     return (
-        <PokemonCard pokemon={pokemon} />
+        <div className="flex items-center justify-center mt-4">
+            <PokemonCard pokemon={pokemon} isWinner={true} />
+        </div>
     )
 }
 
