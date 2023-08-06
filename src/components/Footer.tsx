@@ -1,7 +1,7 @@
 const Footer = () => {
     return (
-    <footer>
-        Developed by Rafael Salas Robledo
+    <footer className="flex items-end">
+        ®️ Developed by Rafael Salas Robledo
     </footer>)
 }
 

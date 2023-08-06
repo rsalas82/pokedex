@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    font-size: 48px;
+    font-weight: 900;
+}
+
+h2 {
+    font-size: 36px;
+    font-weight: 700;
+}
+
+h3 {
+    font-size: 24px;
+    font-weight: 500;
+}
+
+#root > header {
+    padding-left: 2rem;
+    height: 20vh;
+}
+
+#root > main {
+    margin-top: auto;
+}
+
+#root > footer {
+    margin-top: auto;
+}

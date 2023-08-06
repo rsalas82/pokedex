@@ -48,6 +48,20 @@ export interface Move {
     power: number;
 }
 
+export interface Battle {
+    order: number;
+    left: AdaptedPokemon;
+    right: AdaptedPokemon;
+    leftWon: number;
+    rightWon: number;
+}
+
+
+export interface Round {
+    battles: Battle[];
+    updateBattleResults: (battles: Battle[]) => void;
+}
+
 
 /* Types returned by API */
 export interface MoveAPI {
