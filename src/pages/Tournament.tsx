@@ -1,6 +1,6 @@
 import { useContext, useEffect, useState } from "react"
 import { ChosenContext } from "../contexts/ChosenContext"
-import { AdaptedPokemon, Battle } from "../types/types"
+import { Battle } from "../types/types"
 import Round from "../components/Round"
 
 const Tournament = () => {
@@ -8,7 +8,7 @@ const Tournament = () => {
     const [quarterfinals, setQuarterfinals] = useState<Battle[] | null>(null)
     const [semifinals, setSemifinals] = useState<Battle[] | null>(null)
     const [final, setFinal] = useState<Battle[] | null>(null)
-    const [winner, setWinner] = useState<AdaptedPokemon | null>(null)
+    // const [winner, setWinner] = useState<AdaptedPokemon | null>(null)
 
     const updateQuarterfinalsResults = (battles: Battle[]) => {
         setQuarterfinals(battles)
@@ -48,8 +48,8 @@ const Tournament = () => {
 
     const updateFinalsResults = (battles: Battle[]) => {
         setFinal(battles)
-        const tournamentWinner = battles[0].leftWon >= 3 ? battles[0].left : battles[0].right
-        setWinner(tournamentWinner)
+        // const tournamentWinner = battles[0].leftWon >= 3 ? battles[0].left : battles[0].right
+        // setWinner(tournamentWinner)
     }
 
     useEffect(() => {
