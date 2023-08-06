@@ -45,8 +45,8 @@ const Pokedex = () => {
     const {chosen} = useContext(ChosenContext)
     
     return (
-        <div className='flex gap-4 w-full mt-4'>
-          <section className='flex flex-col justify-start items-center w-[30vw] gap-2 border-2 border-[#2a75bb] py-2 pr-2 rounded-xl ml-2'>
+        <div className='flex gap-4 w-full mt-4 items-center'>
+          <section className='flex flex-col justify-start items-center w-[30vw] gap-2 border-2 border-[#2a75bb] py-2 pr-2 rounded-xl ml-2 min-h-[30rem]'>
             <PokemonChosen />
           </section>
           <section className='flex justify-center w-[40vw]'>
@@ -54,9 +54,9 @@ const Pokedex = () => {
               <PokemonCard pokemon={selectedPokemon} />
             ): (<PokemonCard pokemon={initialPokemon} />)}
           </section>
-          <section className='flex flex-col items-center h-[28rem] gap-2 w-[30vw] pl-10 py-4 border-2 border-[#ffcb05] py-2 pl-2 rounded-xl ml-2'>
-            <h3>You must pick {8 - chosen.length} pokemons</h3>
-            <div className='flex flex-col h-[28rem] gap-2 w-[30vw] pl-10 py-4 snap-y overflow-y-scroll overflow-x-hidden'>
+          <section className='flex flex-col justify-start items-center w-[30vw] gap-2 border-2 ml-2 border-[#ffcb05] py-2 pl-2 rounded-xl'>
+            <span>You must pick {8 - chosen.length} pokemons</span>
+            <div className='flex flex-col h-[28rem] gap-2 w-[30vw] pl-10 snap-y overflow-y-scroll overflow-x-hidden'>
               {pokemonList.map((pokemon) => {
                 return (
                   <PokemonSelector key={pokemon.name} pokemonName={pokemon.name} selectPokemon={setSelectedPokemon} />

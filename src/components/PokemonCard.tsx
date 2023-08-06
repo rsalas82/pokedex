@@ -23,7 +23,7 @@ const PokemonCard = ({ pokemon }: { pokemon: AdaptedPokemon }) => {
             <main className="p-2 bg-white">
                 <img src={image} height={256} width={256} />
                 <div className="flex items-center justify-center">
-                    {types.map(({ name, color }) => <PokemonType name={name} color={color} />)}
+                    {types.map(({ name, color }) => <PokemonType key={name} name={name} color={color} />)}
                 </div>
             </main>
             <footer className="w-full">

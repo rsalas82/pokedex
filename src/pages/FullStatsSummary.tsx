@@ -10,8 +10,6 @@ const FullStatsSummary = ({name}: {name: string}) => {
         getPokemonInfo(name).then((pokemonItem) => setPokemon(pokemonItem))
     }, [name])
 
-    // console.log({pokemon})
-
     const mainImage = pokemon ? pokemon.sprites?.front_default : ''
     const order = pokemon ? pokemon.order : '###'
     const pokemonName = pokemon ? camelize(pokemon.name) : 'Noname'
