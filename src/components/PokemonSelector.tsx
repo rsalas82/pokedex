@@ -13,6 +13,9 @@ const PokemonSelector = ({pokemonName, selectPokemon}: {key: string, pokemonName
     const isChosen = chosen.find(({id: pokemonId}) => pokemonId === id)
 
     const handleClickPokemon = () => {
+        if (chosen.length === 8) {
+            return null
+        }
         updateChosenPokemons(pokemon)
     }
 
@@ -21,22 +24,22 @@ const PokemonSelector = ({pokemonName, selectPokemon}: {key: string, pokemonName
     }
 
     return (
-        <div key={id} 
+        <article key={id} 
                 className='grid grid-cols-4 bg-[#ffcb05] hover:scale-x-105 hover:transition-transform hover:bg-red-400 pl-2 pr-4 rounded-l-3xl place-items-center place-content-center text-slate-700'
                 onClick={handleClickPokemon} onMouseOver={handleMouseOverPokemon}>
             {isLoading ? <img src={PokemonLogo} className='animate-spin' /> : (
                 <>
                     <span className='place-self-start self-center'>
-                        {isChosen ? <img src={PokemonLogo} alt="Pokeball toggle" height={36} width={36}/> : ""}
+                        {isChosen ? <img src={PokemonLogo} alt="Pokeball toggle" height={36} width={36} className='animate-spin'/> : ""}
                     </span>
                     <picture>
-                        <img src={image} height={48} width={48}/>
+                        <img src={image} height={48} width={48} alt={`Pokemon: ${camelize(name)}`} />
                     </picture>
                     <span>No. {order}</span>
                     <span>{camelize(name)}</span>
                 </>
             )}
-        </div>
+        </article>
     )
 }
 
