@@ -1,27 +1,48 @@
-# POKEDEX
+# Pokemon Tournament
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Description
 
-Currently, two official plugins are available:
+This project allows creating Pokemon Tournaments in 3 phases:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+1. Pick 8 different pokemons.
+2. Simulate a tournament based on random stone-paper-scissors choices.
+3. Show the list of winners (position and total points).
 
-## Expanding the ESLint configuration
+This project uses the [Pokeapi](https://pokeapi.co/) to retrieve all the Pokemon data.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Technical information
 
-- Configure the top-level `parserOptions` property like this:
+This is a ReactJS + TypeScript project, create with ViteJS, just for fun and for learning concepts.
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
+It uses the following dependencies:
+
+- *wouter*: a light router dependency, simpler than react-router.
+- *tailwindcss*: a CSS library focused on utilities. Simple to use, and ideal for quick projects.
+- *vitest*: a testing library used with ViteJS.
+- *eslint*: a library for analyzing code statically and show errors.
+
+### Tasks
+
+- [x] Create a Pokemon selector which shows his/her number, name and sprite.
+- [x] Show the Pokemon selected as a card where user will be able to check his/her type/s, some moves, experience...
+- [x] Store the Pokemons selected by using the Context API.
+- [ ] Create a tournament with the Pokemons selected (should be 8 of them).
+- [ ] Show the Pokemon Tournament as a competition organigram.
+- [ ] Run the fights based on stone, paper, scissors rules.
+- [ ] Show the list winners
+
+## Installation
+
+After downloading the project, execute this command to install all the dependencies locally:
+
+```
+pnpm install
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+Go to the folder `pokedex` and type the following command to up the project:
+
+```
+pnpm run dev
+```
+
+In a browser, access to [http://localhost:3000](http://localhost:3000).
