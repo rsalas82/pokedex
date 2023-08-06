@@ -26,10 +26,14 @@ It uses the following dependencies:
 - [x] Create a Pokemon selector which shows his/her number, name and sprite.
 - [x] Show the Pokemon selected as a card where user will be able to check his/her type/s, some moves, experience...
 - [x] Store the Pokemons selected by using the Context API.
-- [ ] Create a tournament with the Pokemons selected (should be 8 of them).
-- [ ] Show the Pokemon Tournament as a competition organigram.
-- [ ] Run the fights based on stone, paper, scissors rules.
-- [ ] Show the list winners
+- [x] Create a tournament with the Pokemons selected (should be 8 of them).
+- [ ] Show the Pokemon Tournament like a tree.
+- [x] Run the fights based (random results).
+- [x] Show the tournament winner.
+- [ ] Add MSW for mocking endpoint calls.
+- [ ] Virtualized the pokemon list.
+- [ ] Show the list winners (saved in sessionStorage).
+- [ ] Change fonts.
 
 ## Installation
 
