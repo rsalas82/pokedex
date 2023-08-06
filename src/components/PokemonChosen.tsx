@@ -14,21 +14,21 @@ const PokemonChosen = () => {
 
     return (
         <>
-            <h3>Please, select {8 - chosen.length} more</h3>
+            <span>Please, select {8 - chosen.length} more</span>
             {chosen.length > 0 ? 
                 (chosen.map(({id, order, name, image, types, moves, baseExperience}) => 
                     {
                         return (
                             <article key={id} 
                                     onClick={() => handleClickRemovePokemon({id, order, name, image, types, moves, baseExperience})}
-                                    className='grid grid-cols-4 bg-[#2a75bb] pl-2 pr-4 rounded-r-3xl items-center text-slate-700 w-full text-white hover:scale-x-105 hover:transition-transform hover:bg-red-400'>
+                                    className='grid grid-cols-4 gap-2 bg-[#2a75bb] rounded-r-3xl items-center text-slate-700 w-full text-white hover:scale-x-105 hover:translate-x-0.5 hover:bg-red-400'>
                                 <>
                                     <span className="text-left">{camelize(name)}</span>
                                     <span>No. {order}</span>
                                     <picture>
-                                        <img src={image} height={48} width={48} alt={`Pokemon: ${camelize(name)}`} />
+                                        <img src={image} height={36} width={36} alt={`Pokemon: ${camelize(name)}`} />
                                     </picture>
-                                    <span className='justify-self-end'>
+                                    <span className='justify-self-endn'>
                                         <img src={TrashIcon} alt="Pokeball toggle" height={24} width={24}/>
                                     </span>
                                 </>

@@ -24,16 +24,16 @@ const PokemonSelector = ({pokemonName, selectPokemon}: {key: string, pokemonName
     }
 
     return (
-        <article key={id} 
-                className='grid grid-cols-4 bg-[#ffcb05] hover:scale-x-105 hover:transition-transform hover:bg-red-400 pl-2 pr-4 rounded-l-3xl place-items-center place-content-center text-slate-700'
+        <article key={id}
+                className='grid grid-cols-4 gap-2 bg-[#ffcb05] rounded-l-3xl items-center text-slate-700 w-full text-white hover:scale-x-105 hover:translate-x-0.5 hover:bg-red-400'
                 onClick={handleClickPokemon} onMouseOver={handleMouseOverPokemon}>
             {isLoading ? <img src={PokemonLogo} className='animate-spin' /> : (
                 <>
-                    <span className='place-self-start self-center'>
+                    <span className='place-self-start self-center h-full'>
                         {isChosen ? <img src={PokemonLogo} alt="Pokeball toggle" height={36} width={36} className='animate-spin'/> : ""}
                     </span>
                     <picture>
-                        <img src={image} height={48} width={48} alt={`Pokemon: ${camelize(name)}`} />
+                        <img src={image} height={36} width={36} alt={`Pokemon: ${camelize(name)}`} />
                     </picture>
                     <span>No. {order}</span>
                     <span>{camelize(name)}</span>
