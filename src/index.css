@@ -650,16 +650,16 @@ video {
   place-items: center;
 }
 
-.items-end {
-  align-items: flex-end;
-}
-
 .items-center {
   align-items: center;
 }
 
 .justify-start {
   justify-content: flex-start;
+}
+
+.justify-end {
+  justify-content: flex-end;
 }
 
 .justify-center {
@@ -1076,6 +1076,10 @@ video {
   --tw-gradient-to: #F95587 var(--tw-gradient-to-position);
 }
 
+.fill-white {
+  fill: #fff;
+}
+
 .p-2 {
   padding: 0.5rem;
 }
@@ -1276,14 +1280,6 @@ h3 {
 #root > header {
   padding-left: 2rem;
   height: 20vh;
-}
-
-#root > main {
-  margin-top: auto;
-}
-
-#root > footer {
-  margin-top: auto;
 }
 
 .hover\:translate-x-0:hover {

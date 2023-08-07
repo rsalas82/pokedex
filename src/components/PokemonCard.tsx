@@ -5,7 +5,7 @@ import PokemonMove from "./PokemonMove"
 import PokemonType from "./PokemonType"
 
 
-const PokemonCard = ({ pokemon, isWinner = false }: { pokemon: AdaptedPokemon, isWinner: boolean }) => {
+const PokemonCard = ({ pokemon, isWinner = false }: { pokemon: AdaptedPokemon, isWinner?: boolean }) => {
     const { name, order, image, types, baseExperience, moves } = pokemon
     let [fromColor, toColor] = ['', '', '']
     const primaryType = getColorByType(types[0].color)

@@ -6,10 +6,16 @@ import react from '@vitejs/plugin-react-swc'
 export default defineConfig({
   plugins: [react()],
   test: {
+    css: false,
     globals: true,
     environment: 'jsdom',
+    watch: false,
+    setupFiles: './src/setupTests.ts'
   },
   server: {
     port: 3000,
   },
+  build: {
+    sourcemap: true,
+  }
 })

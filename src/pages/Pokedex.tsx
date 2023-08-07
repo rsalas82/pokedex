@@ -51,7 +51,7 @@ const Pokedex = () => {
           </section>
           <section className='flex justify-center w-[40vw]'>
             {selectedPokemon ? (
-              <PokemonCard pokemon={selectedPokemon} />
+              <PokemonCard pokemon={selectedPokemon} isWinner/>
             ): (<PokemonCard pokemon={initialPokemon} />)}
           </section>
           <section className='flex flex-col justify-start items-center w-[30vw] gap-2 border-2 ml-2 border-[#ffcb05] py-2 pl-2 rounded-xl'>
