@@ -108,11 +108,3 @@ h3 {
     padding-left: 2rem;
     height: 20vh;
 }
-
-#root > main {
-    margin-top: auto;
-}
-
-#root > footer {
-    margin-top: auto;
-}
